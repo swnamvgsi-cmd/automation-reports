@@ -3,46 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>일일 경제 데이터 브리핑</title>
+  <title data-i18n="title">일일 경제 데이터 브리핑</title>
   <style>
     body{font-family:"Malgun Gothic","Segoe UI",sans-serif;background:#f0f2f5;padding:20px;color:#273444}
-    .container{max-width:1280px;margin:0 auto}.header{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:20px}
-    h1{margin:0;color:#18324a;font-size:25px}.timestamp{color:#667085;font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    .card{background:#fff;border-radius:9px;box-shadow:0 2px 5px rgba(0,0,0,.09);padding:20px;min-height:430px}
-    .card-header{min-height:82px}h2{margin:0 0 8px;font-size:18px;border-bottom:2px solid #e2e8f0;padding-bottom:10px}
+    .container{max-width:1280px;margin:0 auto}
+    .lang-bar{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+    .lang-btn{border:1px solid #d7dee8;background:#fff;border-radius:20px;padding:5px 14px;font-size:12px;cursor:pointer;font-family:inherit;color:#667085;transition:all .15s}
+    .lang-btn.active{background:#185fa5;color:#fff;border-color:#185fa5}
+    .lang-btn:hover:not(.active){background:#f0f4f8;border-color:#b8c8dc}
+    .header{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:20px}
+    h1{margin:0;color:#18324a;font-size:25px}.timestamp{color:#667085;font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .card{background:#fff;border-radius:9px;box-shadow:0 2px 5px rgba(0,0,0,.09);padding:20px}
+    .card-header{min-height:82px}
+    h2{margin:0 0 8px;font-size:18px;border-bottom:2px solid #e2e8f0;padding-bottom:10px}
     p{margin:0;color:#536273;font-size:14px;line-height:1.55}.widget{height:320px;margin-top:14px}.widget iframe{width:100%;height:100%;border:0}
     .steel-panel{display:grid;gap:12px;margin-top:18px}.steel-row{display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:center;padding:14px 16px;border:1px solid #d7dee8;border-radius:8px;color:#1f2937;text-decoration:none;background:#f8fafc}
     .steel-row:hover{border-color:#2563eb;background:#eef4ff}.steel-row strong{display:block}.steel-row em{display:block;margin-top:4px;color:#2563eb;font-style:normal;font-size:13px}.steel-row small{color:#4b5563;line-height:1.45}
-    @media(max-width:900px){.header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.steel-row{grid-template-columns:1fr}}
+    @media(max-width:900px){.header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.steel-row{grid-template-columns:1fr}.widget{height:260px}}
+    @media(max-width:480px){body{padding:12px}h1{font-size:20px}h2{font-size:15px}.card{padding:14px}.card-header{min-height:unset}}
   </style>
 </head>
 <body><div class="container">
-  <div class="header"><h1>일일 경제 데이터 브리핑</h1><div class="timestamp">기준 일시: 2026. 6. 8. PM 4:02:15</div></div>
+  <div class="lang-bar">
+    <button class="lang-btn active" data-lang="ko">🇰🇷 한국어</button>
+    <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+    <button class="lang-btn" data-lang="vi">🇻🇳 Tiếng Việt</button>
+  </div>
+  <div class="header">
+    <h1 data-i18n="title">일일 경제 데이터 브리핑</h1>
+    <div class="timestamp"><span data-i18n="ts">기준 일시</span>: 2026. 6. 9. PM 4:38:00</div>
+  </div>
   <div class="grid">
     <section class="card">
-    <div class="card-header"><h2>국제 유가 동향 (WTI / Brent)</h2><p>유가 상승은 물류비, 전력비, 원자재 운송비 부담으로 연결됩니다.</p></div>
+    <div class="card-header"><h2 data-i18n="oil-h">국제 유가 동향 (WTI / Brent)</h2><p data-i18n="oil-p">유가 상승은 물류비, 전력비, 원자재 운송비 부담으로 연결됩니다.</p></div>
     <div class="widget"><iframe title="국제 유가 동향 (WTI / Brent)" scrolling="no" src="https://s.tradingview.com/embed-widget/symbol-overview/?symbols=TVC%3AUSOIL%7CTVC%3AUKOIL&colorTheme=light&width=100%25&height=100%25&locale=kr"></iframe></div>
   </section>
 <section class="card">
-    <div class="card-header"><h2>주요 환율 동향 (USD/KRW, USD/VND)</h2><p>달러 강세는 PC Bar, Flange, 설비 부품의 수입 원가에 직접 영향을 줍니다.</p></div>
+    <div class="card-header"><h2 data-i18n="fx-h">주요 환율 동향 (USD/KRW, USD/VND)</h2><p data-i18n="fx-p">달러 강세는 PC Bar, Flange, 설비 부품의 수입 원가에 직접 영향을 줍니다.</p></div>
     <div class="widget"><iframe title="주요 환율 동향 (USD/KRW, USD/VND)" scrolling="no" src="https://s.tradingview.com/embed-widget/symbol-overview/?symbols=FX_IDC%3AUSDKRW%7CFX_IDC%3AUSDVND&colorTheme=light&width=100%25&height=100%25&locale=kr"></iframe></div>
   </section>
 <section class="card">
-    <div class="card-header"><h2>벌크 물류 운임 (Baltic Dry Index)</h2><p>BDI는 철광석과 석탄 등 벌크 원자재의 해상 운임 압력을 보여줍니다.</p></div>
+    <div class="card-header"><h2 data-i18n="bdi-h">벌크 물류 운임 (Baltic Dry Index)</h2><p data-i18n="bdi-p">BDI는 철광석과 석탄 등 벌크 원자재의 해상 운임 압력을 보여줍니다.</p></div>
     <div class="widget"><iframe title="벌크 물류 운임 (Baltic Dry Index)" scrolling="no" src="https://s.tradingview.com/embed-widget/symbol-overview/?symbols=INDEX%3ABDI&colorTheme=light&width=100%25&height=100%25&locale=kr"></iframe></div>
   </section>
-    <section class="card"><div class="card-header"><h2>Steel 관련 지표</h2><p>HRC, 중국 철근, SGX 철광석의 원본 차트를 확인합니다.</p></div><div class="steel-panel"><a class="steel-row" href="https://www.tradingview.com/symbols/COMEX-HRC1%21/" target="_blank" rel="noopener">
-    <span><strong>HRC Steel Futures</strong><em>COMEX:HRC1!</em></span><small>열연강판 가격 방향과 Flange 원가 압력을 확인합니다.</small>
+    <section class="card">
+      <div class="card-header"><h2 data-i18n="steel-h">Steel 관련 지표</h2><p data-i18n="steel-p">HRC, 중국 철근, SGX 철광석의 원본 차트를 확인합니다.</p></div>
+      <div class="steel-panel"><a class="steel-row" href="https://www.tradingview.com/symbols/COMEX-HRC1%21/" target="_blank" rel="noopener">
+    <span><strong>HRC Steel Futures</strong><em>COMEX:HRC1!</em></span><small data-i18n="hrc-s">열연강판 가격 방향과 Flange 원가 압력을 확인합니다.</small>
   </a>
 <a class="steel-row" href="https://www.tradingview.com/symbols/SHFE-RB1%21/" target="_blank" rel="noopener">
-    <span><strong>China Steel Rebar Futures</strong><em>SHFE:RB1!</em></span><small>중국 철근 수요로 PC Bar 구매 시점을 판단합니다.</small>
+    <span><strong>China Steel Rebar Futures</strong><em>SHFE:RB1!</em></span><small data-i18n="rebar-s">중국 철근 수요로 PC Bar 구매 시점을 판단합니다.</small>
   </a>
 <a class="steel-row" href="https://www.tradingview.com/symbols/SGX-FEF1%21/" target="_blank" rel="noopener">
-    <span><strong>SGX Iron Ore Futures</strong><em>SGX:FEF1!</em></span><small>철광석 원가가 Steel 가격에 미치는 선행 압력을 확인합니다.</small>
+    <span><strong>SGX Iron Ore Futures</strong><em>SGX:FEF1!</em></span><small data-i18n="ore-s">철광석 원가가 Steel 가격에 미치는 선행 압력을 확인합니다.</small>
   </a>
 <a class="steel-row" href="https://www.tradingview.com/markets/futures/quotes-metals/" target="_blank" rel="noopener">
-    <span><strong>Metals Futures Table</strong><em>TradingView</em></span><small>금속 선물 지표를 한 화면에서 비교합니다.</small>
-  </a></div></section>
+    <span><strong>Metals Futures Table</strong><em>TradingView</em></span><small data-i18n="metals-s">금속 선물 지표를 한 화면에서 비교합니다.</small>
+  </a></div>
+    </section>
   </div>
-</div></body>
-</html>
+</div>
+<script>
+const T={
+  ko:{title:'일일 경제 데이터 브리핑',ts:'기준 일시','oil-h':'국제 유가 동향 (WTI / Brent)','oil-p':'유가 상승은 물류비, 전력비, 원자재 운송비 부담으로 연결됩니다.','fx-h':'주요 환율 동향 (USD/KRW, USD/VND)','fx-p':'달러 강세는 PC Bar, Flange, 설비 부품의 수입 원가에 직접 영향을 줍니다.','bdi-h':'벌크 물류 운임 (Baltic Dry Index)','bdi-p':'BDI는 철광석과 석탄 등 벌크 원자재의 해상 운임 압력을 보여줍니다.','steel-h':'Steel 관련 지표','steel-p':'HRC, 중국 철근, SGX 철광석의 원본 차트를 확인합니다.','hrc-s':'열연강판 가격 방향과 Flange 원가 압력을 확인합니다.','rebar-s':'중국 철근 수요로 PC Bar 구매 시점을 판단합니다.','ore-s':'철광석 원가가 Steel 가격에 미치는 선행 압력을 확인합니다.','metals-s':'금속 선물 지표를 한 화면에서 비교합니다.'},
+  en:{title:'Daily Economic Data Briefing',ts:'As of','oil-h':'Oil Price Trends (WTI / Brent)','oil-p':'Rising oil prices increase logistics, electricity, and raw material transport costs.','fx-h':'Exchange Rate Trends (USD/KRW, USD/VND)','fx-p':'Dollar strength directly impacts import costs for PC Bar, Flange, and equipment parts.','bdi-h':'Bulk Freight Rates (Baltic Dry Index)','bdi-p':'BDI shows sea freight pressure for bulk raw materials such as iron ore and coal.','steel-h':'Steel Indicators','steel-p':'Check original charts for HRC, China Rebar, and SGX Iron Ore.','hrc-s':'Check hot-rolled steel price direction and Flange cost pressure.','rebar-s':'Use China rebar demand to determine PC Bar purchase timing.','ore-s':"Check iron ore cost's leading pressure on steel prices.",'metals-s':'Compare metal futures indicators on one screen.'},
+  vi:{title:'Bản tin kinh tế hàng ngày',ts:'Cập nhật','oil-h':'Xu hướng giá dầu (WTI / Brent)','oil-p':'Giá dầu tăng làm tăng chi phí vận chuyển, điện và nguyên liệu thô.','fx-h':'Tỷ giá ngoại tệ (USD/KRW, USD/VND)','fx-p':'Đồng đô la mạnh ảnh hưởng trực tiếp đến chi phí nhập khẩu PC Bar, Flange và phụ kiện.','bdi-h':'Cước vận tải hàng rời (Baltic Dry Index)','bdi-p':'BDI phản ánh áp lực cước vận tải biển cho nguyên liệu như quặng sắt và than.','steel-h':'Chỉ số thép','steel-p':'Xem biểu đồ gốc cho HRC, thép thanh Trung Quốc và quặng sắt SGX.','hrc-s':'Kiểm tra hướng giá thép cán nóng và áp lực chi phí Flange.','rebar-s':'Dùng nhu cầu thép thanh Trung Quốc để xác định thời điểm mua PC Bar.','ore-s':'Kiểm tra áp lực chi phí quặng sắt đối với giá thép.','metals-s':'So sánh chỉ số hợp đồng tương lai kim loại trên một màn hình.'}
+};
+function applyLang(l){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    if(T[l]?.[el.dataset.i18n]) el.textContent=T[l][el.dataset.i18n];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  localStorage.setItem('briefing-lang',l);
+}
+document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+applyLang(localStorage.getItem('briefing-lang')||'ko');
+</script>
+</body></html>
