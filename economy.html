@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>일일 경제 데이터 브리핑</title>
+  <style>
+    body{font-family:"Malgun Gothic","Segoe UI",sans-serif;background:#f0f2f5;padding:20px;color:#273444}
+    .container{max-width:1280px;margin:0 auto}.header{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:20px}
+    h1{margin:0;color:#18324a;font-size:25px}.timestamp{color:#667085;font-size:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    .card{background:#fff;border-radius:9px;box-shadow:0 2px 5px rgba(0,0,0,.09);padding:20px;min-height:430px}
+    .card-header{min-height:82px}h2{margin:0 0 8px;font-size:18px;border-bottom:2px solid #e2e8f0;padding-bottom:10px}
+    p{margin:0;color:#536273;font-size:14px;line-height:1.55}.widget{height:320px;margin-top:14px}.widget iframe{width:100%;height:100%;border:0}
+    .steel-panel{display:grid;gap:12px;margin-top:18px}.steel-row{display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:center;padding:14px 16px;border:1px solid #d7dee8;border-radius:8px;color:#1f2937;text-decoration:none;background:#f8fafc}
+    .steel-row:hover{border-color:#2563eb;background:#eef4ff}.steel-row strong{display:block}.steel-row em{display:block;margin-top:4px;color:#2563eb;font-style:normal;font-size:13px}.steel-row small{color:#4b5563;line-height:1.45}
+    @media(max-width:900px){.header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.steel-row{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><div class="container">
+  <div class="header"><h1>일일 경제 데이터 브리핑</h1><div class="timestamp">기준 일시: 2026. 6. 8. PM 4:02:15</div></div>
+  <div class="grid">
+    <section class="card">
+    <div class="card-header"><h2>국제 유가 동향 (WTI / Brent)</h2><p>유가 상승은 물류비, 전력비, 원자재 운송비 부담으로 연결됩니다.</p></div>
+    <div class="widget"><iframe title="국제 유가 동향 (WTI / Brent)" scrolling="no" src="https://s.tradingview.com/embed-widget/symbol-overview/?symbols=TVC%3AUSOIL%7CTVC%3AUKOIL&colorTheme=light&width=100%25&height=100%25&locale=kr"></iframe></div>
+  </section>
+<section class="card">
+    <div class="card-header"><h2>주요 환율 동향 (USD/KRW, USD/VND)</h2><p>달러 강세는 PC Bar, Flange, 설비 부품의 수입 원가에 직접 영향을 줍니다.</p></div>
+    <div class="widget"><iframe title="주요 환율 동향 (USD/KRW, USD/VND)" scrolling="no" src="https://s.tradingview.com/embed-widget/symbol-overview/?symbols=FX_IDC%3AUSDKRW%7CFX_IDC%3AUSDVND&colorTheme=light&width=100%25&height=100%25&locale=kr"></iframe></div>
+  </section>
+<section class="card">
+    <div class="card-header"><h2>벌크 물류 운임 (Baltic Dry Index)</h2><p>BDI는 철광석과 석탄 등 벌크 원자재의 해상 운임 압력을 보여줍니다.</p></div>
+    <div class="widget"><iframe title="벌크 물류 운임 (Baltic Dry Index)" scrolling="no" src="https://s.tradingview.com/embed-widget/symbol-overview/?symbols=INDEX%3ABDI&colorTheme=light&width=100%25&height=100%25&locale=kr"></iframe></div>
+  </section>
+    <section class="card"><div class="card-header"><h2>Steel 관련 지표</h2><p>HRC, 중국 철근, SGX 철광석의 원본 차트를 확인합니다.</p></div><div class="steel-panel"><a class="steel-row" href="https://www.tradingview.com/symbols/COMEX-HRC1%21/" target="_blank" rel="noopener">
+    <span><strong>HRC Steel Futures</strong><em>COMEX:HRC1!</em></span><small>열연강판 가격 방향과 Flange 원가 압력을 확인합니다.</small>
+  </a>
+<a class="steel-row" href="https://www.tradingview.com/symbols/SHFE-RB1%21/" target="_blank" rel="noopener">
+    <span><strong>China Steel Rebar Futures</strong><em>SHFE:RB1!</em></span><small>중국 철근 수요로 PC Bar 구매 시점을 판단합니다.</small>
+  </a>
+<a class="steel-row" href="https://www.tradingview.com/symbols/SGX-FEF1%21/" target="_blank" rel="noopener">
+    <span><strong>SGX Iron Ore Futures</strong><em>SGX:FEF1!</em></span><small>철광석 원가가 Steel 가격에 미치는 선행 압력을 확인합니다.</small>
+  </a>
+<a class="steel-row" href="https://www.tradingview.com/markets/futures/quotes-metals/" target="_blank" rel="noopener">
+    <span><strong>Metals Futures Table</strong><em>TradingView</em></span><small>금속 선물 지표를 한 화면에서 비교합니다.</small>
+  </a></div></section>
+  </div>
+</div></body>
+</html>
