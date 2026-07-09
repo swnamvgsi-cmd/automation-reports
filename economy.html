@@ -20,6 +20,11 @@
     p{margin:0;color:#536273;font-size:14px;line-height:1.55}.widget{height:320px;margin-top:14px}.widget iframe{width:100%;height:100%;border:0}
     .steel-panel{display:grid;gap:12px;margin-top:18px}.steel-row{display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:center;padding:14px 16px;border:1px solid #d7dee8;border-radius:8px;color:#1f2937;text-decoration:none;background:#f8fafc}
     .steel-row:hover{border-color:#2563eb;background:#eef4ff}.steel-row strong{display:block}.steel-row em{display:block;margin-top:4px;color:#2563eb;font-style:normal;font-size:13px}.steel-row small{color:#4b5563;line-height:1.45}
+    .implications{margin-bottom:20px}
+    .implication-list{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:10px}
+    .implication-list li{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;font-size:14px;line-height:1.6;color:#334155}
+    .implication-list li strong{color:#185fa5}
+    .implications .notice{color:#94a3b8;font-size:13px;margin:0}
     @media(max-width:900px){.header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:1fr}.steel-row{grid-template-columns:1fr}.widget{height:260px}}
     @media(max-width:480px){body{padding:12px}h1{font-size:20px}h2{font-size:15px}.card{padding:14px}.card-header{min-height:unset}}
   </style>
@@ -32,8 +37,15 @@
   </div>
   <div class="header">
     <h1 data-i18n="title">일일 경제 데이터 브리핑</h1>
-    <div class="timestamp"><span data-i18n="ts">기준 일시</span>: 2026. 7. 9. AM 7:54:00</div>
+    <div class="timestamp"><span data-i18n="ts">기준 일시</span>: 2026. 7. 9. AM 9:01:04</div>
   </div>
+  <section class="card implications">
+    <div class="card-header"><h2>📊 종합 시사점</h2><p>서버에서 실시간 조회한 환율(USD/KRW, USD/VND) 데이터를 기반으로 자동 생성되었습니다.</p></div>
+    <ul class="implication-list">
+      <li>USD/KRW 환율: <strong>1,506원</strong> — 최초 기록이라 전일 대비 비교 데이터가 없습니다.</li>
+      <li>USD/VND 환율: <strong>26,221.7동</strong> — 최초 기록이라 전일 대비 비교 데이터가 없습니다.</li>
+    </ul>
+  </section>
   <div class="grid">
     <section class="card">
     <div class="card-header"><h2 data-i18n="oil-h">국제 유가 동향 (WTI / Brent)</h2><p data-i18n="oil-p">유가 상승은 물류비, 전력비, 원자재 운송비 부담으로 연결됩니다.</p></div>
